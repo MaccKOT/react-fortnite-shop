@@ -21,3 +21,16 @@ nav {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image > img {
+  width: 100%;
+}
+
+.card-content {
+  flex-grow: 1;
+}
