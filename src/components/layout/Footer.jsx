@@ -8,7 +8,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Copyright Text
           <a
             className='grey-text text-lighten-4 right'
-            href='https://github.com/MaccKOT/omdb-movie-app'>
+            href='https://github.com/MaccKOT/react-fortnite-shop'>
             Github Repo
           </a>
         </div>

@@ -1,7 +1,8 @@
 {
   "name": "fortnite-shop-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "",
+  "github": "https://github.com/MaccKOT/react-fortnite-shop",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
