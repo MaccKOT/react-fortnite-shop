@@ -41,6 +41,11 @@ const Shop = () => {
     }
   };
 
+  const removeFromCart = (itemId) => {
+    const newOrder = order.filter((el) => el.mainId !== itemId);
+    setOrder(newOrder);
+  };
+
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);
   };
@@ -68,7 +73,11 @@ const Shop = () => {
         <GoodsList goods={goods} addToCart={addToCart} />
       )}
       {isBasketShow && (
-        <BasketList order={order} handleBasketShow={handleBasketShow} />
+        <BasketList
+          order={order}
+          handleBasketShow={handleBasketShow}
+          removeFromCart={removeFromCart}
+        />
       )}
     </main>
   );
