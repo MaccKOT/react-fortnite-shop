@@ -8,4 +8,4 @@ CSS/UI kit: [Materialize CSS](https://materializecss.com/)
 
 API: [FortniteApi.io](https://fortniteapi.io/)
 
-Live demo: [#](#)
+Live demo: [https://agitated-poincare-07f69a.netlify.app](https://agitated-poincare-07f69a.netlify.app)
