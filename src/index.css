@@ -64,7 +64,6 @@ nav {
   max-width: 95%;
   border-radius: 5px;
   background: #e0e0e0;
-  box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #fff;
   animation: showBasket 300ms ease-in-out;
 }
 
@@ -99,3 +98,19 @@ nav {
     opacity: 1;
   }
 }
+
+/* #toast-container {
+  top: 7% !important;
+  animation: toastFadeIn 200s ease-in-out !important;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+} */

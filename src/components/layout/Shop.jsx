@@ -5,12 +5,14 @@ import Preloader from '../Preloader';
 import GoodsList from '../GoodsList';
 import Cart from '../Cart';
 import BasketList from '../BasketList';
+import ALertToast from '../AlertToast';
 
 const Shop = () => {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
+  const [alertName, setAlertName] = useState('');
 
   const addToCart = (item) => {
     const itemIndex = order.findIndex(
@@ -39,6 +41,8 @@ const Shop = () => {
 
       setOrder(newOrder);
     }
+    //информируем пользователя
+    setAlertName(item.displayName);
   };
 
   const removeFromCart = (itemId) => {
@@ -63,6 +67,10 @@ const Shop = () => {
 
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);
+  };
+
+  const closeAlert = () => {
+    setAlertName('');
   };
 
   useEffect(function getGoods() {
@@ -95,6 +103,7 @@ const Shop = () => {
           changeQuantity={changeQuantity}
         />
       )}
+      {alertName && <ALertToast name={alertName} closeAlert={closeAlert} />}
     </main>
   );
 };

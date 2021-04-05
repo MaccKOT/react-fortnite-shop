@@ -14,7 +14,7 @@ const BasketList = (props) => {
   }, 0);
 
   return (
-    <div className='collection basket-list'>
+    <div className='collection basket-list z-depth-3'>
       <li className='collection-item active'>Корзина</li>
       {order.length ? (
         order.map((item) => (
@@ -31,6 +31,13 @@ const BasketList = (props) => {
       <li className='collection-item active'>
         Общая стоимость: <b>{totalPrice}</b>
       </li>
+
+      <li className='collection-item'>
+        <button className='btn btn-small'>
+          <i className='material-icons left'>attach_money</i>Оформить
+        </button>
+      </li>
+
       <span
         onClick={() => handleBasketShow()}
         className='material-icons basket-close'>
