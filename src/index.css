@@ -80,6 +80,15 @@ nav {
   cursor: pointer;
 }
 
+.basket-quantity {
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  color: #26a69a;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 @keyframes showBasket {
   from {
     top: 70%;

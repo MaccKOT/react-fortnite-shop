@@ -7,10 +7,23 @@ const BasketItem = (props) => {
     price,
     quantity,
     removeFromCart = Function.prototype,
+    changeQuantity = Function.prototype,
   } = props;
   return (
     <li className='collection-item'>
-      {displayName} × {quantity} = {price.finalPrice * quantity}
+      {displayName}{' '}
+      <span
+        onClick={() => changeQuantity(mainId, -1)}
+        className='material-icons basket-quantity'>
+        remove
+      </span>{' '}
+      × {quantity}{' '}
+      <span
+        onClick={() => changeQuantity(mainId, +1)}
+        className='material-icons basket-quantity'>
+        add
+      </span>{' '}
+      = {price.finalPrice * quantity}
       <span className='secondary-content'>
         <span
           onClick={() => removeFromCart(mainId)}

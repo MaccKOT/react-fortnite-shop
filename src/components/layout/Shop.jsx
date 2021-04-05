@@ -46,6 +46,21 @@ const Shop = () => {
     setOrder(newOrder);
   };
 
+  const changeQuantity = (itemId, itemChange) => {
+    //меняет количество quantity у элемента на величину itemChange
+    const newOrder = order.map((el) => {
+      if (el.mainId === itemId) {
+        // брать только положительные значения
+        const newQuantity =
+          el.quantity + itemChange >= 0 ? el.quantity + itemChange : 0;
+        return { ...el, quantity: newQuantity };
+      } else {
+        return el;
+      }
+    });
+    setOrder(newOrder);
+  };
+
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);
   };
@@ -77,6 +92,7 @@ const Shop = () => {
           order={order}
           handleBasketShow={handleBasketShow}
           removeFromCart={removeFromCart}
+          changeQuantity={changeQuantity}
         />
       )}
     </main>
