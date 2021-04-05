@@ -8,9 +8,10 @@ const GoodsItem = (props) => {
     displayDescription,
     price,
     displayAssets,
+    addToCart = Function.prototype,
   } = props;
   return (
-    <div className='card' id={mainId}>
+    <div className='card'>
       <div className='card-image'>
         <img src={displayAssets[0].background} alt={displayName} />
       </div>
@@ -19,7 +20,11 @@ const GoodsItem = (props) => {
         <p>{displayDescription}</p>
       </div>
       <div className='card-action'>
-        <button className='btn'>Buy</button>
+        <button
+          className='btn'
+          onClick={() => addToCart({ mainId, displayName, price })}>
+          Buy
+        </button>
         <span className='right valign-wrapper' style={{ fontSize: '1.5rem' }}>
           {price.regularPrice}
           <img src={vBucksImage} width='28' height='28' alt='v-bucks' />
